@@ -10,7 +10,6 @@ interface GenreResponseProps {
   title: string;
 }
 
-
 interface SideBarProps {
   selectedGenreIdState: number;
   handleClick(id: number): void;
@@ -18,12 +17,6 @@ interface SideBarProps {
 
 export function SideBar({selectedGenreIdState, handleClick}: SideBarProps) {
 
- 
-
-  
-  const [selectedGenre, setSelectedGenre] = useState<GenreResponseProps>({} as GenreResponseProps);
-
-  
   const [genres, setGenres] = useState<GenreResponseProps[]>([]);
 
   useEffect(() => {
@@ -33,14 +26,6 @@ export function SideBar({selectedGenreIdState, handleClick}: SideBarProps) {
   }, []);
  
 
-  useEffect(() => {
-    api.get<GenreResponseProps>(`genres/${selectedGenreIdState}`).then(response => {
-      setSelectedGenre(response.data);
-    })
-  }, [selectedGenreIdState]);
-
-
-  
   return(
     
     <nav className="sidebar">
