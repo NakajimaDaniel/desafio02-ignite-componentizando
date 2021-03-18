@@ -42,7 +42,7 @@ export function SideBar({selectedGenreIdState, handleClick}: SideBarProps) {
 
   
   return(
-    <div style={{ display: 'flex', flexDirection: 'row' }}>
+    
     <nav className="sidebar">
       <span>Watch<p>Me</p></span>
 
@@ -59,6 +59,6 @@ export function SideBar({selectedGenreIdState, handleClick}: SideBarProps) {
       </div>
 
     </nav>
-    </div>
+
   );
 }

@@ -15,12 +15,11 @@ export function App() {
 
   function handleClickButton(id: number) {
     setSelectedGenreIdProp(id);
-    console.log(selectedGenreIdProp)
   }
 
 
   return (
-    <div>
+    <div style={{ display: 'flex', flexDirection: 'row' }}>
       <SideBar selectedGenreIdState={selectedGenreIdProp} handleClick={handleClickButton}/>
       <Content selectedGenreIdState={selectedGenreIdProp}/>
     </div>
